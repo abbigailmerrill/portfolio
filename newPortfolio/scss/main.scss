@@ -2,11 +2,20 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+body{
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html, body, form {
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
+  }
+
+  h1,h2,h3,h4,h5,h6,p{
+    margin-bottom: 0;
   }
   
   form {
@@ -23,6 +32,7 @@ html, body, form {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
  }
 
  nav img{
@@ -44,6 +54,19 @@ html, body, form {
   font-weight: 700;
   text-decoration: none;
   font-size: 22px;
+  background-color: $mainPurple;
+  background: linear-gradient(to left, $mainPurple 50%, $secondaryPurple 50%) right;
+  background-size: 205%;
+  transition: .25s ease-out;
+ }
+
+ .links a:not(.githubLink){
+  padding: 5px;
+ }
+
+ .links a:hover{
+  background-position: left;
+  color: white;
  }
 
  .githubLink{
@@ -57,3 +80,48 @@ html, body, form {
   color: black;
   font-weight: normal;
  }
+
+ .githubLink svg:hover{
+  color:white!important;
+ }
+
+//  Arrow styling
+
+.arrow{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: sticky;
+}
+
+.line{
+  width: 100px;
+  height: 4px;
+  background-color: black;
+}
+
+.right{
+  transform: rotate(-45deg);
+  margin-left: -10px;
+}
+
+.left{
+  transform: rotate(45deg);
+  margin-right: -10px;
+}
+
+.arrow.shadow .line{
+  background-color: white;
+}
+
+.arrow.shadow{
+  background-color: transparent;
+  margin-top: -94px;
+}
+
+.arrowBox{
+
+}
