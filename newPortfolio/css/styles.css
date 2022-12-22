@@ -1,0 +1,61 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+html, body, form {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+nav {
+  height: 100px;
+  width: 100%;
+  background-color: #CFC2F2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav img {
+  height: 75%;
+  margin-left: 25px;
+}
+
+.links {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 25px;
+}
+
+.links a {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.githubLink {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.links a svg {
+  height: 50%;
+  color: black;
+  font-weight: normal;
+}
+
+/*# sourceMappingURL=styles.css.map */

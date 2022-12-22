@@ -1,0 +1,33 @@
+{
+  "name": "newportfolio",
+  "version": "1.0.0",
+  "description": "My new and up to date portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch scss/styles.scss css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abbigailmerrill/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "software",
+    "engineer",
+    "adjunct",
+    "instrcutor",
+    "professor",
+    "masters",
+    "bachelors",
+    "abbigail",
+    "merrill",
+    "abbi"
+  ],
+  "author": "Abbigail Merrill abbigail.merrill@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abbigailmerrill/portfolio/issues"
+  },
+  "homepage": "https://github.com/abbigailmerrill/portfolio#readme"
+}
