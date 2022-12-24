@@ -33,12 +33,21 @@ html, body, form {
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  z-index: 10;
  }
 
- nav img{
+ nav a img{
   height: 75%;
   margin-left: 25px;
  }
+
+.logo{
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
  .links{
   width: 60%;
@@ -85,7 +94,7 @@ html, body, form {
   color:white!important;
  }
 
-//  Arrow styling
+ //  Arrow styling
 
 .arrow{
   height: 100px;
@@ -97,15 +106,37 @@ html, body, form {
   position: sticky;
 }
 
-.line{
+.line, .widgetLine{
   width: 100px;
   height: 4px;
   background-color: black;
+  transition: 2s color;
+}
+
+.widgetLine{
+  background-color: white;
+}
+
+.widgetArrow{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .right{
   transform: rotate(-45deg);
   margin-left: -10px;
+}
+
+.widgetLine.left{
+  transform:rotate(-45deg);
+}
+
+.widgetLine.right{
+  transform:rotate(45deg);
 }
 
 .left{
@@ -115,13 +146,54 @@ html, body, form {
 
 .arrow.shadow .line{
   background-color: white;
+  transition: 2s color;
 }
 
-.arrow.shadow{
+.arrow.shadow, .widgetArrow.shadow{
   background-color: transparent;
   margin-top: -94px;
 }
 
 .arrowBox{
-
+  z-index: 9;
 }
+
+.arrowBox:hover{
+
+  .line{
+    background-color: $secondaryPurple;
+    transition: 2s color;
+  }
+
+  .arrow.shadow .line{
+    background-color: black;
+    transition: 2s color;
+  }
+}
+
+.widget{
+  height: 100px;
+  width: 100px;
+  background-color: $mainPurple;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.widgetArrow.shadow .widgetLine{
+  background-color: black;
+}
+
+.widgetBox:hover{
+
+  .widgetLine{
+    background-color: black;
+    transition: 2s color;
+  }
+
+  .widgetArrow.shadow .widgetLine{
+    background-color: $secondaryPurple;
+    transition: 2s color;
+  }
+
+} 

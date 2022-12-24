@@ -33,11 +33,20 @@ nav {
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  z-index: 10;
 }
 
-nav img {
+nav a img {
   height: 75%;
   margin-left: 25px;
+}
+
+.logo {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .links {
@@ -95,15 +104,37 @@ nav img {
   position: sticky;
 }
 
-.line {
+.line, .widgetLine {
   width: 100px;
   height: 4px;
   background-color: black;
+  transition: 2s color;
+}
+
+.widgetLine {
+  background-color: white;
+}
+
+.widgetArrow {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .right {
   transform: rotate(-45deg);
   margin-left: -10px;
+}
+
+.widgetLine.left {
+  transform: rotate(-45deg);
+}
+
+.widgetLine.right {
+  transform: rotate(45deg);
 }
 
 .left {
@@ -113,29 +144,61 @@ nav img {
 
 .arrow.shadow .line {
   background-color: white;
+  transition: 2s color;
 }
 
-.arrow.shadow {
+.arrow.shadow, .widgetArrow.shadow {
   background-color: transparent;
   margin-top: -94px;
 }
 
+.arrowBox {
+  z-index: 9;
+}
+
+.arrowBox:hover .line {
+  background-color: #724ae0;
+  transition: 2s color;
+}
+.arrowBox:hover .arrow.shadow .line {
+  background-color: black;
+  transition: 2s color;
+}
+
+.widget {
+  height: 100px;
+  width: 100px;
+  background-color: #CFC2F2;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.widgetArrow.shadow .widgetLine {
+  background-color: black;
+}
+
+.widgetBox:hover .widgetLine {
+  background-color: black;
+  transition: 2s color;
+}
+.widgetBox:hover .widgetArrow.shadow .widgetLine {
+  background-color: #724ae0;
+  transition: 2s color;
+}
+
 #hero {
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to right, #9C6EF2, #260C5A);
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-direction: column;
   overflow: hidden;
+  justify-content: space-between;
 }
 
 h1 {
   color: white;
   font-size: 42px;
+}
+
+.heroHeader {
   margin-top: 300px;
 }
 
@@ -148,6 +211,43 @@ h2 {
 
 .arrowBox {
   margin-bottom: 25px;
+}
+
+.section {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #9C6EF2, #260C5A);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about {
+  flex-direction: column;
+}
+#about h1 {
+  margin-bottom: 29px;
+  margin-top: 150px;
+}
+
+.aboutContent {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutContent img, .aboutContent p {
+  height: 75%;
+}
+.aboutContent p {
+  color: white;
+  width: 35%;
+  margin-left: 50px;
+  line-height: 2.05;
+  margin-top: -10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
