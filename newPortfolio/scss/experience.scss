@@ -1,0 +1,53 @@
+#experience{
+    flex-direction: column;
+
+    h1{
+        margin-top:100px;
+    }
+}
+
+.experienceContent{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expImgs{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.wunderkind{
+    height: 200px;
+    margin-left: -250px;
+}
+
+.iupui{
+    height: 125px;
+    margin-left: 110px;
+}
+
+.experienceContent {
+    
+    p{
+    height: 75%;
+    width: 40%;
+    color: white;
+    margin-left: 50px;
+    }
+    
+    p a{
+        color: violet;
+    }
+    
+    p a:hover{
+        color: $gradientValue2;
+    }
+}
+

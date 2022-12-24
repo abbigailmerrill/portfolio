@@ -1,0 +1,23 @@
+#projects{
+    flex-direction: column;
+
+    h1{
+        margin-top: 100px;
+    }
+}
+
+.projectLine{
+    height: 2px;
+    width: 350px;
+    background-color: white;
+    margin-top: 8px;
+}
+
+.projectBox{
+    height: 75%;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
