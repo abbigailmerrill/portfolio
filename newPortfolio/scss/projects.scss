@@ -1,8 +1,10 @@
 #projects{
     flex-direction: column;
+    height: auto;
+    padding-bottom: 15px;
 
     h1{
-        margin-top: 100px;
+        margin-top: 115px;
     }
 }
 
@@ -13,11 +15,40 @@
     margin-top: 8px;
 }
 
-.projectBox{
-    height: 75%;
-    width: 100%;
+.projectContainer{
+    min-height: 75%;
+    width: 85%;
     margin-top: 10px;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.projectBox{
+    height: 350px;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 22px;
+
+    h3{
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    img{
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    p{
+        color: white;
+        font-size: 14px;
+        text-align: left;
+        width: 100%;
+        margin-top: 10px;
+    }
 }
