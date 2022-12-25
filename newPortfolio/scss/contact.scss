@@ -1,0 +1,70 @@
+#contact{
+    flex-direction: column;
+
+    h3{
+        color: white;
+        margin-bottom: 10px;
+        width: auto;
+        margin: 10px 15px 0 15px;
+    }
+
+    h4{
+        color: white;
+        font-weight: 500;
+    }
+}
+
+form{
+    height: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: auto;
+}
+
+input, textarea{
+    color: $inputColor;
+    font-weight: 500;
+    font-style: italic;
+}
+
+#contact input{
+    height: 40px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+input::placeholder, textarea::placeholder{
+    padding-left: 10px;
+}
+
+input, textarea{
+    padding: 10px;
+}
+
+#contact textarea{
+    width: 300px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+button{
+    border: none;
+    height: 40px;
+    width: 100px;
+    background-color: #CDC2EE;
+    color: #191919;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.emailAddress{
+    color: $mainPurple;
+    margin-top: 10px;
+}
+
+.emailAddress:hover{
+    color: $secondaryPurple;
+}
