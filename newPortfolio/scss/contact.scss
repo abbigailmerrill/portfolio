@@ -1,5 +1,6 @@
 #contact{
     flex-direction: column;
+    height: auto;
 
     h3{
         color: white;
@@ -67,4 +68,10 @@ button{
 
 .emailAddress:hover{
     color: $gradientValue1;
+}
+
+@media screen and (max-height: 460px){
+    .adjust{
+        margin-top: -15px;
+    }
 }

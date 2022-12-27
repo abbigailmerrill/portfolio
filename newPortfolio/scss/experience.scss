@@ -86,3 +86,13 @@
     }
 
 }
+
+@media screen and (max-height: 600px){
+    #experience h1{
+        margin-top: 35%;
+    }
+
+    .arrowBox{
+        z-index: 11;
+    }
+}

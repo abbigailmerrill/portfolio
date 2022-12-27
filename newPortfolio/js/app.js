@@ -83,3 +83,13 @@ document.body.querySelector(".heroBox").addEventListener('click', function(e){
         behavior: 'smooth'
     })
 })
+
+document.querySelectorAll('.links a:not(.githubLink)').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior:'smooth'
+        })
+    })
+})

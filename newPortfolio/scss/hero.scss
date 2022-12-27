@@ -46,3 +46,9 @@ h2{
         font-size: 18px;
     }
 }
+
+@media screen and (max-height: 679px){
+    #hero h2{
+        margin-top: 0;
+    }
+}
