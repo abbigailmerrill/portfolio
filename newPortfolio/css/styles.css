@@ -434,6 +434,31 @@ h2 {
   color: #260C5A;
 }
 
+@media screen and (max-width: 945px) {
+  .wunderkind {
+    height: 25%;
+  }
+  .iupui {
+    height: 15%;
+  }
+  .experienceContent p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .expImgs {
+    justify-content: center;
+    margin-top: -100px;
+  }
+  .experienceContent {
+    flex-direction: column;
+  }
+  .experienceContent p {
+    width: 80%;
+    font-size: 12px;
+    margin-top: -100px;
+  }
+}
 #projects {
   flex-direction: column;
   height: auto;
