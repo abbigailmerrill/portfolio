@@ -34,3 +34,15 @@ h2{
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 520px){
+    #hero h2{
+        font-size:24px;
+    }
+}
+
+@media screen and (max-width: 415px){
+    #hero h2{
+        font-size: 18px;
+    }
+}

@@ -80,6 +80,7 @@ html, body, form {
 
  .githubLink{
   height: 100%;
+  object-fit: cover;
   display: flex;
   align-items: center;
  }
@@ -197,3 +198,123 @@ html, body, form {
   }
 
 } 
+
+// Menu button design and animation stylings
+
+.menu{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 75%;
+  width: 100px;
+  cursor: pointer;
+  margin-right: 75px;
+  position: relative;
+}
+
+.menu div{
+  width: 70%;
+  height: 4px;
+  border-radius: 25px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%,50%);
+  transition: transform .6s, opacity .8s, top .6s
+}
+
+.menu.postAnimation{
+  margin-right: 0;
+}
+
+.menu div:nth-child(1){
+  top: 25%;
+}
+
+.menu div:nth-child(1).active{
+  transform: translate(-50%, -50%) rotate(-315deg);
+  top: 50%;
+}
+
+.menu div:nth-child(2).active{
+  opacity: 0;
+  transition: 0s;
+}
+
+.menu div:nth-child(3){
+  top: 75%;
+}
+
+.menu div:nth-child(3).active{
+  transform: translate(-50%, -50%) rotate(-225deg);
+  top: 50%;
+}
+
+.menuSlideout{
+  height: 90%;
+  width: 400px;
+  background-color: $mainPurple;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 100px;
+  display: none;
+  z-index: 11;
+
+  .githubLink{
+    height: 15%;
+  }
+
+  .githubLink svg{
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.menuSlideout a{
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0;
+}
+
+.menuSlideout.active{
+  animation: slideIn .75s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+@keyframes slideIn{
+  0%{
+    transform: translateX(100%);
+  }
+
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width: 740px){
+
+  .links{
+    display: none;
+  }
+
+  .menu{
+    display: flex;
+  }
+
+}
+
+@media screen and (min-width: 740px){
+  .menuSlideout{
+    display: none !important;
+  }
+}
+
+// Inside of the menu styling
+

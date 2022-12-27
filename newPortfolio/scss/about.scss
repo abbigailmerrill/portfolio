@@ -26,3 +26,31 @@
         margin-top: -10px;
     }
 }
+
+@media screen and (max-width: 990px){
+    
+    .aboutContent{
+
+        margin-top: -100px;
+
+        img, p{
+            height: 60%;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 740px){
+    .aboutContent{
+        flex-direction: column;
+
+        p{
+            width: 80%;
+            margin-top: 25px;
+        }
+    }
+}

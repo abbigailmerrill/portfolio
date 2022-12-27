@@ -80,6 +80,7 @@ nav a img {
 
 .githubLink {
   height: 100%;
+  object-fit: cover;
   display: flex;
   align-items: center;
 }
@@ -187,6 +188,112 @@ nav a img {
   transition: 2s color;
 }
 
+.menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 75%;
+  width: 100px;
+  cursor: pointer;
+  margin-right: 75px;
+  position: relative;
+}
+
+.menu div {
+  width: 70%;
+  height: 4px;
+  border-radius: 25px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 50%);
+  transition: transform 0.6s, opacity 0.8s, top 0.6s;
+}
+
+.menu.postAnimation {
+  margin-right: 0;
+}
+
+.menu div:nth-child(1) {
+  top: 25%;
+}
+
+.menu div:nth-child(1).active {
+  transform: translate(-50%, -50%) rotate(-315deg);
+  top: 50%;
+}
+
+.menu div:nth-child(2).active {
+  opacity: 0;
+  transition: 0s;
+}
+
+.menu div:nth-child(3) {
+  top: 75%;
+}
+
+.menu div:nth-child(3).active {
+  transform: translate(-50%, -50%) rotate(-225deg);
+  top: 50%;
+}
+
+.menuSlideout {
+  height: 90%;
+  width: 400px;
+  background-color: #CFC2F2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 100px;
+  display: none;
+  z-index: 11;
+}
+.menuSlideout .githubLink {
+  height: 15%;
+}
+.menuSlideout .githubLink svg {
+  height: 100%;
+  width: 100%;
+}
+
+.menuSlideout a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0;
+}
+
+.menuSlideout.active {
+  animation: slideIn 0.75s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@media screen and (max-width: 740px) {
+  .links {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+}
+@media screen and (min-width: 740px) {
+  .menuSlideout {
+    display: none !important;
+  }
+}
 #hero {
   flex-direction: column;
   overflow: hidden;
@@ -224,6 +331,16 @@ h2 {
   justify-content: center;
 }
 
+@media screen and (max-width: 520px) {
+  #hero h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 415px) {
+  #hero h2 {
+    font-size: 18px;
+  }
+}
 #about {
   flex-direction: column;
 }
@@ -250,6 +367,26 @@ h2 {
   margin-top: -10px;
 }
 
+@media screen and (max-width: 990px) {
+  .aboutContent {
+    margin-top: -100px;
+  }
+  .aboutContent img, .aboutContent p {
+    height: 60%;
+  }
+  .aboutContent p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 740px) {
+  .aboutContent {
+    flex-direction: column;
+  }
+  .aboutContent p {
+    width: 80%;
+    margin-top: 25px;
+  }
+}
 #experience {
   flex-direction: column;
 }
@@ -409,12 +546,12 @@ button {
 }
 
 .emailAddress {
-  color: #CFC2F2;
+  color: violet;
   margin-top: 10px;
 }
 
 .emailAddress:hover {
-  color: #724ae0;
+  color: #9C6EF2;
 }
 
 /*# sourceMappingURL=styles.css.map */
