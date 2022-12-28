@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/abbigailmerrill/portfolio/issues"
   },
-  "homepage": "https://github.com/abbigailmerrill/portfolio#readme"
+  "homepage": "https://github.com/abbigailmerrill/portfolio#readme",
+  "dependencies": {
+    "firebase": "^9.15.0"
+  }
 }
